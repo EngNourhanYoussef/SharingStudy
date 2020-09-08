@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lap.sharingstudy">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+
+        android:allowBackup="true"
+        android:requestLegacyExternalStorage="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Upload.Upload"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Disussion.DiscussionSubmit"
+            android:label="Post" />
+        <activity
+            android:name=".Download.Download"
+            android:label="Downloads" />
+        <activity
+            android:name=".Forum.Forum"
+            android:label="Forum" />
+        <activity
+            android:name=".Upload.ShareBook"
+            android:label="Share a Book" />
+        <activity
+            android:name=".Disussion.DiscussionScreen"
+            android:label="Discussions" />
+        <activity
+            android:name=".Book.BooksCategory"
+            android:label="List of Books" />
+        <activity
+            android:name=".News.NewsMainActivity"
+            android:label="News" />
+        <activity
+            android:name=".Login"
+            android:label="Login"
+            android:noHistory="true" />
+        <activity
+            android:name=".Register"
+            android:label="Register"
+            android:noHistory="true" />
+
+        <!--App Widget -->
+        <receiver
+            android:name=".Disussion.DiscussionWidgetProvider"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.udacity.stockhawk.ACTION_DATA_UPDATED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_description" />
+        </receiver>
+        <service
+            android:name=".Disussion.DiscussionWidgetRemoteViewService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false" />
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" />
+        <meta-data
+            android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+            android:value="com.google.firebase.components.ComponentRegistrar" />
+        <meta-data
+            android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+            android:value="com.google.firebase.components.ComponentRegistrar" />
+        <meta-data
+            android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+            android:value="com.google.firebase.components.ComponentRegistrar" />
+
+    </application>
+
+
+
+</manifest>

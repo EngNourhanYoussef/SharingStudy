@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "141417525871",
+    "firebase_url": "https://sharingstudy-bc9c1.firebaseio.com",
+    "project_id": "sharingstudy-bc9c1",
+    "storage_bucket": "sharingstudy-bc9c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141417525871:android:05b8d5274ff939383f139a",
+        "android_client_info": {
+          "package_name": "com.example.lap.sharingstudy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141417525871-u3egmn522imkbsuev38ji9lqefu7fugs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMegIocpXX304jiPYcoIBpQD2r0wGLkDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141417525871-u3egmn522imkbsuev38ji9lqefu7fugs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
